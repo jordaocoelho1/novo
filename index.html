@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente para Victória</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            max-width: 480px;
+            text-align: center;
+            margin: 60px auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        
+        h1::after {
+            content: '|';
+            opacity: 1;
+            margin-left: 5px;
+            display: inline-block;
+            animation: blink .7s infinite;
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Victória e Jordão</h1>
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <h3>Escolha Nº 1</h3>
+                <p>???</p>
+                <a href="escolha1.html">Escolher</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>02</h2>
+                <h3>Escolha Nº 2</h3>
+                <p>???</p>
+                <a href="escolha2.html">Escolher</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>03</h2>
+                <h3>Escolha Nº 3</h3>
+                <p>???</p>
+                <a href="escolha3.html">Escolher</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>04</h2>
+                <h3>Escolha Nº 4</h3>
+                <p>???</p>
+                <a href="escolha4.html">Escolher</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>05</h2>
+                <h3>Escolha Nº 5</h3>
+                <p>???</p>
+                <a href="escolha5.html">Escolher</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>06</h2>
+                <h3>Escolha Nº 6</h3>
+                <p>???</p>
+                <a href="escolha6.html">Escolher</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function typeWriter(elemento) {
+            const textoArray = elemento.innerHTML.split('');
+            elemento.innerHTML = '';
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => elemento.innerHTML += letra, 75 * i);
+            });
+        }
+
+        // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+        // function typeWriter(elemento) {
+        //   const textoArray = elemento.innerHTML.split('');
+        //   elemento.innerHTML = '';
+        //   for(let i = 0; i < textoArray.length; i++) {
+        //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+        //   }
+        // }
+
+        const titulo = document.querySelector('h1');
+        typeWriter(titulo);
+    </script>
+</body>
+
+</html>
